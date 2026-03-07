@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -9,7 +10,7 @@
 
 <link rel="stylesheet" href="estilos.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
@@ -18,15 +19,19 @@
 <header class="header">
 
 <div class="logo-area">
-<img src="logo.jpg" alt="logo" class="logo">
-<h1 class="titulo">Fervaleli</h1>
+
+<img src="logo.jpg" class="logo">
+
+<div class="brand">
+<h1>Fervaleli</h1>
+<p>Repostería artesanal</p>
+</div>
+
 </div>
 
 <input type="checkbox" id="menu-toggle">
 
-<label for="menu-toggle" class="menu-icon">
-☰
-</label>
+<label for="menu-toggle" class="menu-icon">☰</label>
 
 <nav class="menu">
 
@@ -39,6 +44,31 @@
 </nav>
 
 </header>
+
+
+<section class="carousel">
+
+<button class="flecha izquierda" onclick="cambiarSlide(-1)">❮</button>
+
+<div class="slides">
+
+<img src="pastel1.png" class="slide">
+<img src="pastel2.png" class="slide">
+<img src="pastel3.png" class="slide">
+
+</div>
+
+<button class="flecha derecha" onclick="cambiarSlide(1)">❯</button>
+
+<div class="indicadores">
+<span class="punto" onclick="irSlide(0)"></span>
+<span class="punto" onclick="irSlide(1)"></span>
+<span class="punto" onclick="irSlide(2)"></span>
+</div>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
