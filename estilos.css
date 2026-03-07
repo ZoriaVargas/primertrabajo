@@ -33,7 +33,8 @@ gap:20px;
 /* LOGO */
 
 .logo{
-height:210px;
+height:280px;
+width: auto;
 }
 
 /* BRAND TEXT */
@@ -257,4 +258,5 @@ height:45vh;
 }
 
 }
+
 
