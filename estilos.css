@@ -33,7 +33,7 @@ gap:20px;
 /* LOGO */
 
 .logo{
-height:280px;
+height:210px;
 width: auto;
 }
 
@@ -215,8 +215,12 @@ padding:25px;
 
 }
 
+
 .logo{
-height:70px;
+height:110px;
+width:auto;
+}
+
 }
 
 .brand h1{
@@ -256,7 +260,4 @@ display:flex;
 .carousel{
 height:45vh;
 }
-
-}
-
 
