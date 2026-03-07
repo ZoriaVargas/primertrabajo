@@ -7,7 +7,8 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial, sans-serif;
+font-family:'Poppins', sans-serif;
+background:#fff7fb;
 }
 
 /* HEADER */
@@ -16,71 +17,227 @@ font-family:Arial, sans-serif;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:15px 40px;
-background-color:rgb(254,190,229);
-flex-wrap:wrap;
+padding:40px 80px;
+background-color:#FEBEE5;
+
 }
 
-/* LOGO + TITULO */
+/* LOGO AREA */
 
 .logo-area{
 display:flex;
 align-items:center;
-gap:60px;
+gap:20px;
 }
+
+/* LOGO */
 
 .logo{
-height:70px;
+height:110px;
 }
 
-.titulo{
+/* BRAND TEXT */
+
+.brand h1{
 font-family:'Great Vibes', cursive;
-font-size:50px;
+font-size:70px;
 color:white;
+}
+
+.brand p{
+color:white;
+font-size:18px;
+letter-spacing:2px;
 }
 
 /* MENU */
 
 .menu{
 display:flex;
-gap:25px;
+gap:40px;
 }
 
 .menu a{
 text-decoration:none;
-font-size:18px;
-color:black;
-font-weight:bold;
+font-weight:600;
+font-size:20px;
+color:#333;
+transition:0.3s;
 }
 
 .menu a:hover{
 color:white;
 }
 
-/* ICONO MENU CELULAR */
+/* MENU HAMBURGUESA */
 
 .menu-icon{
 display:none;
-font-size:30px;
+font-size:34px;
 cursor:pointer;
 }
-
-/* CHECKBOX OCULTO */
 
 #menu-toggle{
 display:none;
 }
 
+/* CARRUSEL */
+
+.carousel{
+
+position:relative;
+width:100%;
+height:65vh;
+
+overflow:hidden;
+
+background:linear-gradient(
+to bottom,
+#ffe6f3,
+white
+);
+
+}
+
+/* SLIDES */
+
+.slides{
+display:flex;
+height:100%;
+transition:transform 0.6s ease;
+}
+
+.slide{
+pointer-events:none;
+
+
+min-width:100%;
+height:100%;
+
+object-fit:contain;
+
+padding:30px;
+
+}
+
+/* FLECHAS */
+
+.flecha{
+
+position:absolute;
+top:50%;
+
+transform:translateY(-50%);
+
+background:white;
+
+border:none;
+
+font-size:32px;
+
+cursor:pointer;
+
+padding:12px 18px;
+
+border-radius:50%;
+
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
+
+transition:0.3s;
+
+z-index:10;
+
+
+}
+
+.flecha:hover{
+background:#ff8dc6;
+color:white;
+}
+
+.izquierda{
+left:25px;
+}
+
+.derecha{
+right:25px;
+}
+
+/* INDICADORES */
+
+.indicadores{
+
+position:absolute;
+bottom:20px;
+
+width:100%;
+
+text-align:center;
+
+}
+
+.punto{
+
+display:inline-block;
+
+width:12px;
+height:12px;
+
+margin:6px;
+
+background:#ffc2e2;
+
+border-radius:50%;
+
+cursor:pointer;
+
+opacity:0.5;
+
+transition:0.3s;
+
+}
+
+.punto.activo{
+opacity:1;
+background:#ff69b4;
+}
+
 /* RESPONSIVE */
 
-@media (max-width:768px){
+@media (max-width:900px){
+
+.header{
+
+flex-wrap:wrap;
+
+padding:25px;
+
+}
+
+.logo{
+height:70px;
+}
+
+.brand h1{
+font-size:45px;
+}
+
+.brand p{
+font-size:14px;
+}
 
 .menu{
-width:100%;
-flex-direction:column;
+
 display:none;
-margin-top:15px;
+
+flex-direction:column;
+
+width:100%;
+
 text-align:center;
+
+margin-top:20px;
+
 }
 
 .menu a{
@@ -95,12 +252,8 @@ display:block;
 display:flex;
 }
 
-.titulo{
-font-size:40px;
-}
-
-.logo{
-height:60px;
+.carousel{
+height:45vh;
 }
 
 }
