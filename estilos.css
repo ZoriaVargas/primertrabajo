@@ -271,14 +271,15 @@ border-radius:10px;
 ========================= */
 @media (max-width:900px){
 
-/* HEADER */
 .header{
-flex-wrap:wrap;
-justify-content:space-between; /* 🔥 CLAVE */
+display:flex;
+align-items:center;
+justify-content:space-between; /* 🔥 mantiene orden */
+flex-wrap:nowrap; /* 🔥 evita que se rompa */
 padding:15px;
 }
 
-/* LOGO AREA */
+/* LOGO + TEXTO */
 .logo-area{
 display:flex;
 align-items:center;
@@ -287,16 +288,24 @@ gap:10px;
 
 /* LOGO */
 .logo{
-height:90px;
+height:70px;
 }
 
-/* TEXTO */
+/* TEXTO (🔥 ESTE ERA EL PROBLEMA) */
 .brand h1{
-font-size:32px; /* 🔥 reducido */
+font-size:28px; /* 🔥 mucho más controlado */
+white-space:nowrap; /* 🔥 evita que se rompa */
 }
 
 .brand p{
-font-size:12px;
+display:none; /* 🔥 opcional: quítalo en móvil */
+}
+
+/* ICONO ☰ */
+.menu-icon{
+display:block;
+font-size:30px;
+margin-left:auto; /* 🔥 lo manda a la derecha */
 }
 
 /* MENU */
@@ -308,63 +317,10 @@ text-align:center;
 margin-top:15px;
 background:#FEBEE5;
 border-radius:10px;
-overflow:hidden;
 }
 
-.menu a{
-padding:15px;
-font-size:18px;
-border-top:1px solid rgba(255,255,255,0.3);
-}
-
-/* ICONO */
-.menu-icon{
-display:block;
-margin-left:auto; /* 🔥 empuja a la derecha */
-}
-
-/* ACTIVAR MENU */
 #menu-toggle:checked + .menu-icon + .menu{
 display:flex;
-}
-
-/* CARRUSEL */
-.carousel{
-height:45vh;
-}
-
-.slide{
-padding:15px;
-}
-
-/* POSTRES */
-.menu-postres{
-padding:30px 15px;
-}
-
-.menu-postres h2{
-font-size:28px;
-}
-
-/* CONTENEDOR */
-.contenedor-postres{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-/* TARJETAS (2 POR FILA) */
-.postre{
-flex: 1 1 45%;
-max-width:45%;
-padding:15px;
-}
-
-/* IMAGEN */
-.postre img{
-height:140px;
-object-fit:cover;
 }
 
 }
