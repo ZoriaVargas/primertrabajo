@@ -16,23 +16,24 @@ font-family:'Poppins', sans-serif;
 background:#fff7fb;
 }
 
-/* HEADER */
-
 .header{
 display:flex;
 align-items:center;
 justify-content:space-between;
 padding:40px 80px;
 background-color:#FEBEE5;
-
 }
 
-/* LOGO AREA */
-
+/* AGRUPAR LOGO + TEXTO */
 .logo-area{
 display:flex;
 align-items:center;
-gap:20px;
+gap:15px;
+}
+
+/* EMPUJAR MENÚ A LA DERECHA */
+.menu{
+margin-left:auto;
 }
 
 /* LOGO */
