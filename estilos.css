@@ -273,17 +273,17 @@ border-radius:10px;
 /* HEADER */
 .header{
 flex-wrap:wrap;
-padding:20px;
+padding:10px;
 }
 
 /* LOGO */
 .logo{
-height:100px;
+height:120px;
 }
 
 /* TEXTO */
 .brand h1{
-font-size:40px;
+font-size:60px;
 }
 
 .brand p{
@@ -367,7 +367,7 @@ object-fit:cover;
 
 /* TEXTO */
 .brand h1{
-font-size:28px;
+font-size:64px;
 }
 
 .brand p{
