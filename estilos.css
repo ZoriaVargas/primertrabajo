@@ -274,21 +274,29 @@ border-radius:10px;
 /* HEADER */
 .header{
 flex-wrap:wrap;
-padding:10px;
+justify-content:space-between; /* 🔥 CLAVE */
+padding:15px;
+}
+
+/* LOGO AREA */
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 /* LOGO */
 .logo{
-height:120px;
+height:90px;
 }
 
 /* TEXTO */
 .brand h1{
-font-size:60px;
+font-size:32px; /* 🔥 reducido */
 }
 
 .brand p{
-font-size:14px;
+font-size:12px;
 }
 
 /* MENU */
@@ -312,6 +320,7 @@ border-top:1px solid rgba(255,255,255,0.3);
 /* ICONO */
 .menu-icon{
 display:block;
+margin-left:auto; /* 🔥 empuja a la derecha */
 }
 
 /* ACTIVAR MENU */
@@ -337,7 +346,7 @@ padding:30px 15px;
 font-size:28px;
 }
 
-/* 🔥 CONTENEDOR */
+/* CONTENEDOR */
 .contenedor-postres{
 display:flex;
 flex-wrap:wrap;
@@ -345,7 +354,7 @@ justify-content:center;
 gap:20px;
 }
 
-/* 🔥 TARJETAS (2 POR FILA REAL) */
+/* TARJETAS (2 POR FILA) */
 .postre{
 flex: 1 1 45%;
 max-width:45%;
@@ -368,14 +377,14 @@ object-fit:cover;
 
 /* TEXTO */
 .brand h1{
-font-size:64px;
+font-size:26px; /* 🔥 mucho mejor */
 }
 
 .brand p{
-font-size:12px;
+font-size:11px;
 }
 
-/* 🔥 1 POR FILA */
+/* 1 POR FILA */
 .postre{
 flex: 1 1 90%;
 max-width:90%;
