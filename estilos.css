@@ -274,38 +274,35 @@ border-radius:10px;
 .header{
 display:flex;
 align-items:center;
-justify-content:space-between; /* 🔥 mantiene orden */
-flex-wrap:nowrap; /* 🔥 evita que se rompa */
+justify-content:space-between;
+flex-wrap:wrap; /* 🔥 CLAVE */
 padding:15px;
 }
 
-/* LOGO + TEXTO */
 .logo-area{
 display:flex;
 align-items:center;
 gap:10px;
 }
 
-/* LOGO */
+/* 🔥 MÁS GRANDE */
 .logo{
-height:70px;
+height:150px;
 }
 
-/* TEXTO (🔥 ESTE ERA EL PROBLEMA) */
 .brand h1{
-font-size:28px; /* 🔥 mucho más controlado */
-white-space:nowrap; /* 🔥 evita que se rompa */
+font-size:60px;
 }
 
 .brand p{
-display:none; /* 🔥 opcional: quítalo en móvil */
+font-size:16px;
 }
 
-/* ICONO ☰ */
+/* ICONO */
 .menu-icon{
 display:block;
-font-size:30px;
-margin-left:auto; /* 🔥 lo manda a la derecha */
+font-size:32px;
+margin-left:auto;
 }
 
 /* MENU */
@@ -333,7 +330,7 @@ display:flex;
 
 /* TEXTO */
 .brand h1{
-font-size:26px; /* 🔥 mucho mejor */
+font-size:48px; /* 🔥 mucho mejor */
 }
 
 .brand p{
