@@ -271,25 +271,29 @@ border-radius:10px;
 ========================= */
 @media (max-width:900px){
 
+/* HEADER */
 .header{
 display:flex;
 align-items:center;
 justify-content:space-between;
-flex-wrap:wrap; /* 🔥 CLAVE */
+flex-wrap:wrap;
 padding:15px;
+position:relative; /* 🔥 necesario para menú */
 }
 
+/* LOGO + TEXTO */
 .logo-area{
 display:flex;
 align-items:center;
 gap:10px;
 }
 
-/* 🔥 MÁS GRANDE */
+/* LOGO (más grande) */
 .logo{
 height:150px;
 }
 
+/* TEXTO (más grande) */
 .brand h1{
 font-size:60px;
 }
@@ -298,26 +302,86 @@ font-size:60px;
 font-size:16px;
 }
 
-/* ICONO */
+/* ICONO ☰ */
 .menu-icon{
 display:block;
 font-size:32px;
 margin-left:auto;
+cursor:pointer;
 }
 
-/* MENU */
+/* MENU DROPDOWN 🔥 */
 .menu{
 display:none;
+position:absolute;
+top:100%;
+right:15px;
+width:200px;
 flex-direction:column;
-width:100%;
 text-align:center;
-margin-top:15px;
 background:#FEBEE5;
 border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+overflow:hidden;
+z-index:100;
+
+/* animación */
+opacity:0;
+transform:translateY(-10px);
+transition:0.3s;
 }
 
+/* LINKS */
+.menu a{
+padding:15px;
+font-size:18px;
+border-top:1px solid rgba(255,255,255,0.3);
+}
+
+/* ACTIVAR MENU */
 #menu-toggle:checked + .menu-icon + .menu{
 display:flex;
+opacity:1;
+transform:translateY(0);
+}
+
+/* CARRUSEL */
+.carousel{
+height:45vh;
+}
+
+.slide{
+padding:15px;
+}
+
+/* POSTRES */
+.menu-postres{
+padding:30px 15px;
+}
+
+.menu-postres h2{
+font-size:28px;
+}
+
+/* CONTENEDOR */
+.contenedor-postres{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+/* TARJETAS (2 POR FILA) */
+.postre{
+flex: 1 1 45%;
+max-width:45%;
+padding:15px;
+}
+
+/* IMAGEN */
+.postre img{
+height:140px;
+object-fit:cover;
 }
 
 }
@@ -328,16 +392,65 @@ display:flex;
 ========================= */
 @media (max-width:500px){
 
+/* HEADER */
+.header{
+padding:10px;
+position:relative;
+}
+
+/* LOGO */
+.logo{
+height:120px; /* 🔥 más pequeño que tablet */
+}
+
 /* TEXTO */
 .brand h1{
-font-size:48px; /* 🔥 mucho mejor */
+font-size:40px; /* 🔥 ajustado */
 }
 
 .brand p{
-font-size:11px;
+font-size:12px;
 }
 
-/* 1 POR FILA */
+/* ICONO */
+.menu-icon{
+font-size:28px;
+}
+
+/* MENU (MISMO ESTILO DROPDOWN 🔥) */
+.menu{
+display:none;
+position:absolute;
+top:100%;
+right:10px;
+width:180px; /* 🔥 más compacto */
+flex-direction:column;
+text-align:center;
+background:#FEBEE5;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+overflow:hidden;
+z-index:100;
+
+/* animación */
+opacity:0;
+transform:translateY(-10px);
+transition:0.3s;
+}
+
+.menu a{
+padding:12px;
+font-size:16px;
+}
+
+/* ACTIVAR MENU */
+#menu-toggle:checked + .menu-icon + .menu{
+display:flex;
+opacity:1;
+transform:translateY(0);
+}
+
+/* POSTRES */
 .postre{
 flex: 1 1 90%;
 max-width:90%;
